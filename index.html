@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fruit Merge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div>
+        <p class="eyebrow">MERGE GAME</p>
+        <h1>Fruit Merge</h1>
+      </div>
+      <div class="score-box">
+        <span>SCORE</span>
+        <strong id="score">0</strong>
+      </div>
+    </header>
+
+    <section class="game-wrap">
+      <div class="next-box">NEXT <span id="nextFruit">🍒</span></div>
+      <canvas id="game" width="420" height="650" aria-label="과일 합치기 게임"></canvas>
+      <div class="game-over" id="gameOver" hidden>
+        <h2>GAME OVER</h2>
+        <p>최종 점수 <strong id="finalScore">0</strong></p>
+        <button id="restart">다시 하기</button>
+      </div>
+    </section>
+
+    <div class="controls">
+      <p>마우스/터치로 과일을 떨어뜨리세요 · 같은 과일끼리 합쳐집니다</p>
+      <button class="small-btn" id="newGame">새 게임</button>
+    </div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
