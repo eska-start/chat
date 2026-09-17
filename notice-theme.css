@@ -1,0 +1,19 @@
+.evidence{background:rgba(25,30,34,.82);backdrop-filter:blur(2px)}
+.evidence-card{background:#f8f8f5;border:1px solid #8d8d88;border-radius:2px;padding:0;box-shadow:0 18px 50px rgba(0,0,0,.5);overflow:auto}
+.evidence-head{margin:0;padding:16px 18px 12px;border-bottom:3px solid #30302d;background:#f3f3ef;position:relative}
+.evidence-head:before{content:'교통법규 위반 사실 통지';display:block;font-size:10px;font-weight:900;letter-spacing:.12em;color:#666;margin-bottom:5px}
+.evidence-head .eyebrow{margin:0 0 3px;font-size:9px;color:#555;opacity:1;letter-spacing:.08em}
+.evidence-head h2{font-size:25px;letter-spacing:-.06em;color:#1f1f1d}
+.evidence-time{color:#555;opacity:1;font-size:9px}
+.photo-frame{margin:12px 14px 0;border:1px solid #555;border-radius:0;background:#ddd;box-shadow:inset 0 0 0 4px #ecece8}
+.photo-stamp{right:8px;top:8px;border:1px solid rgba(255,255,255,.75);border-radius:0;background:rgba(30,35,37,.78);font-size:8px}
+.evidence-data{margin:12px 14px 0;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid #777;border-left:1px solid #777}
+.evidence-data>div{background:#fff;border-radius:0;padding:9px 10px;border-right:1px solid #777;border-bottom:1px solid #777}
+.evidence-data>div:first-child{grid-column:span 2;background:#efefeb}
+.evidence-data span{font-size:7px;color:#666;opacity:1;letter-spacing:.08em}
+.evidence-data strong{font-size:14px;color:#171715}
+.evidence-note{margin:12px 14px 10px;padding:9px 10px;background:#eee;border-left:4px solid #4a4a46;font-size:10px;opacity:1;color:#383835}
+.evidence-card>button{margin:0 14px 14px;width:calc(100% - 28px);border-radius:2px;background:#30302d;padding:11px;font-size:12px}
+.notice-label{font-size:8px;font-weight:900;letter-spacing:.1em;color:#777}
+.notice-warning{margin:0 14px;padding:7px 9px;background:#e5e5df;border:1px solid #aaa;font-size:9px;font-weight:800;color:#3b3b38}
+@media(max-width:600px){.evidence-head{padding:11px 12px 9px}.evidence-head h2{font-size:18px}.photo-frame{margin:8px 8px 0}.evidence-data{margin:8px 8px 0}.evidence-note{margin:8px 8px}.evidence-card>button{margin:0 8px 8px;width:calc(100% - 16px)}.notice-warning{margin:0 8px}}
