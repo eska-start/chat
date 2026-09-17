@@ -1,45 +1,4 @@
 <!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Fruit Merge</title>
-  <link rel="stylesheet" href="./style.css" />
-</head>
-<body>
-  <main class="app">
-    <header class="topbar">
-      <div>
-        <p class="eyebrow">MERGE GAME</p>
-        <h1>Fruit Merge</h1>
-        <p class="subtitle">같은 과일을 합쳐 더 큰 과일을 만들어보세요.</p>
-      </div>
-      <div class="score-box">
-        <span>SCORE</span>
-        <strong id="score">0</strong>
-      </div>
-    </header>
-
-    <section class="game-wrap">
-      <div class="next-box"><span>NEXT</span><strong id="nextFruit">🍒</strong></div>
-      <div class="canvas-wrap">
-        <canvas id="game" width="420" height="620" aria-label="과일 합치기 게임"></canvas>
-        <div class="game-over" id="gameOver" hidden>
-          <div class="game-over-card">
-            <h2>GAME OVER</h2>
-            <p>최종 점수</p>
-            <strong id="finalScore">0</strong>
-            <button id="restart" type="button">다시 하기</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="controls">
-      <p>마우스/터치로 위치를 정하고 클릭해서 과일을 떨어뜨리세요.</p>
-      <button class="small-btn" id="newGame" type="button">새 게임</button>
-    </div>
-  </main>
-  <script src="./game.js"></script>
-</body>
-</html>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Thunder Volley</title><link rel="stylesheet" href="./style.css"></head>
+<body><main class="app"><header><div><p class="eyebrow">ARCADE VOLLEYBALL</p><h1>Thunder Volley</h1><p class="subtitle">전기 몬스터와 즐기는 1:1 미니 배구</p></div><div class="score-box"><span>SCORE</span><strong id="score">0 : 0</strong></div></header><section class="game-wrap"><canvas id="game" width="900" height="560"></canvas><div class="hud"><div><b>YOU</b><strong id="leftScore">0</strong></div><div id="serveText">READY</div><div><b>CPU</b><strong id="rightScore">0</strong></div></div><div class="overlay" id="overlay"><div class="card"><p class="eyebrow">THUNDER VOLLEY</p><h2 id="overlayTitle">READY?</h2><p id="overlayText">A/D 또는 ←/→로 이동<br>SPACE로 점프</p><button id="startBtn">게임 시작</button></div></div></section><div class="controls"><p><b>이동</b> A/D 또는 ←/→ &nbsp; <b>점프</b> Space</p><button class="small-btn" id="resetBtn">새 게임</button></div><div class="mobile-controls"><button data-key="left">◀</button><button data-key="jump">JUMP</button><button data-key="right">▶</button></div></main><script src="./game.js"></script></body></html>
