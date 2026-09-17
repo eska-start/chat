@@ -14,12 +14,8 @@
         return function(x,y){
           const stack=(new Error()).stack||'';
           if(/drawEvidenceCar/.test(stack)){
-            // The native evidence-car drawing is taller than its nominal
-            // frame because the wheels extend below h. Shrink and lift only
-            // the vehicle so the roof, body, wheels and plate all remain
-            // inside the 720x410 evidence canvas.
-            target.translate(x+30,y-35);
-            target.scale(.82,.82);
+            target.translate(250,170);
+            target.scale(.68,.68);
             return;
           }
           return value.call(target,x,y);
