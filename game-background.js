@@ -34,4 +34,25 @@
       }
     });
   };
+
+  // The evidence photo is drawn with a fixed 720x410 composition. Compress
+  // the vertical composition slightly so the complete vehicle, including
+  // wheels and the lower body, always stays inside the evidence frame.
+  const evidenceCanvas=document.getElementById('evidenceCanvas');
+  if(evidenceCanvas){
+    const evidenceGetContext=evidenceCanvas.getContext.bind(evidenceCanvas);
+    evidenceCanvas.getContext=function(type,options){
+      const c=evidenceGetContext(type,options);
+      if(type!=='2d'||!c)return c;
+      const originalClear=c.clearRect.bind(c);
+      let framed=false;
+      c.clearRect=function(x,y,w,h){
+        c.setTransform(1,0,0,1,0,0);
+        originalClear(x,y,w,h);
+        c.setTransform(1,0,0,.84,0,42);
+        framed=true;
+      };
+      return c;
+    };
+  }
 })();
