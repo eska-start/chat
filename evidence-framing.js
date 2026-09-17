@@ -14,10 +14,12 @@
         return function(x,y){
           const stack=(new Error()).stack||'';
           if(/drawEvidenceCar/.test(stack)){
-            // Scale only the vehicle drawing, not the evidence photo itself.
-            // This leaves enough margin for the roof, body, wheels and plate.
-            target.translate(x+21,y+11);
-            target.scale(.88,.88);
+            // The native evidence-car drawing is taller than its nominal
+            // frame because the wheels extend below h. Shrink and lift only
+            // the vehicle so the roof, body, wheels and plate all remain
+            // inside the 720x410 evidence canvas.
+            target.translate(x+30,y-35);
+            target.scale(.82,.82);
             return;
           }
           return value.call(target,x,y);
