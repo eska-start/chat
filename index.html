@@ -2,16 +2,17 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Fruit Merge</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
   <main class="app">
-    <header>
+    <header class="topbar">
       <div>
         <p class="eyebrow">MERGE GAME</p>
         <h1>Fruit Merge</h1>
+        <p class="subtitle">같은 과일을 합쳐 더 큰 과일을 만들어보세요.</p>
       </div>
       <div class="score-box">
         <span>SCORE</span>
@@ -20,20 +21,25 @@
     </header>
 
     <section class="game-wrap">
-      <div class="next-box">NEXT <span id="nextFruit">🍒</span></div>
-      <canvas id="game" width="420" height="650" aria-label="과일 합치기 게임"></canvas>
-      <div class="game-over" id="gameOver" hidden>
-        <h2>GAME OVER</h2>
-        <p>최종 점수 <strong id="finalScore">0</strong></p>
-        <button id="restart">다시 하기</button>
+      <div class="next-box"><span>NEXT</span><strong id="nextFruit">🍒</strong></div>
+      <div class="canvas-wrap">
+        <canvas id="game" width="420" height="620" aria-label="과일 합치기 게임"></canvas>
+        <div class="game-over" id="gameOver" hidden>
+          <div class="game-over-card">
+            <h2>GAME OVER</h2>
+            <p>최종 점수</p>
+            <strong id="finalScore">0</strong>
+            <button id="restart" type="button">다시 하기</button>
+          </div>
+        </div>
       </div>
     </section>
 
     <div class="controls">
-      <p>마우스/터치로 과일을 떨어뜨리세요 · 같은 과일끼리 합쳐집니다</p>
-      <button class="small-btn" id="newGame">새 게임</button>
+      <p>마우스/터치로 위치를 정하고 클릭해서 과일을 떨어뜨리세요.</p>
+      <button class="small-btn" id="newGame" type="button">새 게임</button>
     </div>
   </main>
-  <script src="game.js"></script>
+  <script src="./game.js"></script>
 </body>
 </html>
